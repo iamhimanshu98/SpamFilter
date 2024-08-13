@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpamFilter</title>
+    <link rel="stylesheet" href="/static/styles/output.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a id="project-title" class="nav-item" href="/">SpamFilter</a>
+            <!-- <ul>
+                <li><a class="nav-item" href="#home">Home</a></li>
+                <li><a class="nav-item" href="#contact">Contact</a></li>
+            </ul> -->
+        </nav>
+    </header>
+    <img class="bg" src="/static/files/moon.jpg" alt="bg">
+    <main>
+        <div class="page" id="home">
+            <div class="box">
+                <h2>Your mail</h2>
+                <hr>
+                <div class="mail">
+                    <p>{{ mail }}</p>
+                </div>
+                <h2>Prediction Result</h2>
+                <hr>
+                <div class="result">
+                    <p><strong>Email Type : </strong> {{ output }}</p>
+                </div>
+                <hr>
+                <div class="buttons">
+                    <a href="/">Go Back</a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>copyright © SpamFilter | All rights reserved.</p>
+        </footer>
+    </main>
+
+
+</body>
+
+</html>

@@ -12,26 +12,27 @@
     <header>
         <nav class="nav-bar">
             <a id="project-title" class="nav-item" href="/">SpamFilter</a>
-            <ul>
+            <!-- <ul>
                 <li><a class="nav-item" href="#home">Home</a></li>
                 <li><a class="nav-item" href="#contact">Contact</a></li>
-            </ul>
+            </ul> -->
         </nav>
     </header>
-    <img class="bg" src="/static/files/night.jpg" alt="bg">
+    <img class="bg" src="/static/files/moon.jpg" alt="bg">
     <main>
         <div class="page" id="home">
             <p>Welcome to SpamFilter | Enter a mail to check for Spam</p>
             <div class="box">
-                <form action="" method="post">
-                    <div class="form-input">
+                <form action="{{ url_for('prediction') }}" method="post">
+                    <!-- <div class="form-input">
                         <label for="name">Name :</label>
-                        <input type="text">
-                    </div>
+                        <input id="name" name="name" type="text" required autocomplete="off">
+                    </div> -->
                     <div class="form-input">
-                        <label for="mail_id">Mail id :</label>
-                        <input type="text">
+                        <label for="mail_id">Type your Mail :</label>
+                        <textarea id="mail" name="mail" type="text" required autocomplete="off" rows="20"></textarea>
                     </div>
+                    
                     <div class="buttons">
                         <button type="reset">Reset</button>
                         <button type="submit">Submit</button>
@@ -39,11 +40,6 @@
                 </form>
             </div>
         </div>
-
-        <div class="page" id="contact">
-            <p>Contact Us</p>
-        </div>
-
         <footer class="footer">
             <p>copyright © SpamFilter | All rights reserved.</p>
         </footer>
