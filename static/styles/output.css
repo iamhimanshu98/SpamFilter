@@ -57,14 +57,13 @@ footer {
     backdrop-filter: blur(2rem);
 }
 .nav-bar a, li {
-    color: white;
+    color: lavender;
     border: 1px solid rgba(255, 255, 255, 0);
     transition: all 0.2s;
     border-radius: 1px;
 }
-.nav-bar a:focus{
-    border: 1px solid white !important;
-
+.nav-bar a:focus-visible{
+    border: 1px solid white;
 }
 
 .nav-bar ul {
@@ -82,7 +81,7 @@ footer {
 .page {
     height: auto;
     min-height: 100vh;
-    padding: 5em 2em 3em; 
+    padding: 5em 2em 3em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,8 +91,8 @@ footer {
 #home {
     flex-direction: column;
 }
-#home p {
-    margin: 3em 1em 2em;
+.page p {
+    margin: 2em 1em 2em;
     font-size: 2.5rem;
     font-weight: 200;
     text-align: center;
@@ -130,19 +129,21 @@ footer {
     transition: all 0.2s;
 }
 .buttons a:hover{
-   transform: scale(1.08);
+   transform: scale(1.05);
 }
 .buttons a:focus {
     box-shadow: 0 0 3px 0px rgb(167, 173, 241);
     transform: scale(1.08);
 }
 
-.result {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.mail p {
+#output {
+    margin: 2em 0;
     text-align: left;
-    font-size: .5rem;
+    font-size: 2.1rem;
 }
+.box h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #d5d5d5;
+}
+

@@ -26,10 +26,10 @@ main {
     backdrop-filter: blur(10rem);
 }
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1em 0;
+    position: fixed;
+    font-size: 1.1rem;
+    bottom: 3rem;
+    text-align: center;
     color: #c4c4c4;
 }
 .bg {
@@ -56,15 +56,22 @@ footer {
     z-index: 100;
     backdrop-filter: blur(2rem);
 }
+
 .nav-bar a, li {
-    color: white;
+    color: lavender;
     border: 1px solid rgba(255, 255, 255, 0);
     transition: all 0.2s;
     border-radius: 1px;
 }
-.nav-bar a:focus{
-    border: 1px solid white !important;
+.nav-item:hover{
+    color: rgb(204, 206, 234);
+}
 
+#project-title:hover{
+    color: rgb(204, 206, 234);
+}
+.nav-bar a:focus-visible{
+    border: 1px solid white;
 }
 
 .nav-bar ul {
@@ -76,9 +83,7 @@ footer {
     padding: 10px;
     margin: 1em;
 }
-.nav-item::selection{
-    border: 0;
-}
+
 .page {
     height: auto;
     min-height: 100vh;
@@ -87,7 +92,6 @@ footer {
     justify-content: center;
     align-items: center;
     color: white;
-    margin-bottom: -2px;
 }
 #home {
     flex-direction: column;
@@ -99,7 +103,7 @@ footer {
     text-align: center;
 }
 .box {
-    background-color: #0000000a;
+    background-color: #00000010;
     width: 60vw;
     height: auto;
     border-radius: 8px;
@@ -128,11 +132,11 @@ footer {
     transition: all 0.2s;
 }
 .buttons button:hover{
-   transform: scale(1.08);
+   transform: scale(1.04);
 }
 .buttons button:focus {
     box-shadow: 0 0 3px 0px rgb(167, 173, 241);
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .form-input {
@@ -149,6 +153,7 @@ form {
 .form-input label {
     margin: 1em 0;
     font-weight: 400;
+    color: #d5d5d5;
 }
 .form-input input {
     border-radius: 5px;
@@ -164,6 +169,7 @@ form {
     background-color: rgba(235, 229, 255, 0);
     border: 1px solid lavender;
     transition: all .2s;
+    color: white;
 }
 #mail:focus {
     border: 1px solid rgb(167, 173, 241);
@@ -172,4 +178,40 @@ form {
 .form-input textarea:focus {
     outline: none;
     color: aliceblue;
+}
+.link_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.link_box a{
+    color: white;
+    font-weight: 500;
+    margin: 2em;
+    font-size: 3rem;
+    transition: all 0.3s;
+}
+.link_box a:hover{
+    color: #c4c4c4;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 1260px) {
+    .box{
+        width: 85%;
+    }
+    .link_box a{
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-bar{
+        padding: 0 2em;
+    }
+    .link_box a{
+        font-size: 2.2rem;
+    }
 }
