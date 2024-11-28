@@ -20,7 +20,7 @@ def prediction():
 
         mail_transformed = converter.transform([mail])
         prediction = model.predict(mail_transformed)[0]
-        label ={"0":"Ham","1":"Spam"}
+        label ={"0":"Not Spam","1":"Spam"}
         output = label.get(str(prediction))
 
     return render_template("output.html",
